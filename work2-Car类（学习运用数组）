@@ -1,0 +1,91 @@
+题目：创建一个汽车类
+
+代码如下：
+import java.util.Scanner;
+
+public class Car {
+	char name[]=new char[20];//汽车名（型号）
+	int tank;//存储汽油的油箱,L
+	int oilConsumption;//车的油耗,km/h
+	Scanner input = new Scanner(System.in);
+	Car() //构造函数，初始化
+	{
+		System.out.print("请输入该汽车的名称：");
+		name=input.next().toCharArray();
+		
+		System.out.print("请输入该汽车的邮箱容量：");
+		tank=input.nextInt();
+		System.out.println();
+		
+		oilConsumption=30;
+	}
+	
+	int add_gas()//给汽车加油
+	{
+		int add_gas0;
+		System.out.print("请输入想要增加的油量(/L)：");
+		add_gas0=input.nextInt();
+		tank=tank+add_gas0;
+
+		System.out.println("现有油量为(/L)："+tank);
+		return 1;
+	}
+	int use_gas()//消耗汽油
+	{
+		int use_gas0;
+		System.out.print("请输入想要消耗的油量(/L)：");
+		use_gas0=input.nextInt();
+		tank=tank-use_gas0;
+
+		System.out.println("现有油量为(/L)："+tank);
+		return 1;
+	}
+	
+	int run()//根据油量判断汽车是否还能运行
+	{
+		if(tank==0)
+			System.out.println("警告！现有油量为0，汽车已无法运行！");
+		else
+			System.out.println("汽车现有油量为(/L)："+tank+" ，汽车可正常运行");
+		return 1;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Car c1=new Car();
+		
+		System.out.println("该汽车的基本信息如下：");
+		//System.out.println("汽车名："+c1.name[20]);
+		System.out.print("汽车名：");
+		for(int i=0;i<c1.name.length;i++)
+			System.out.print(c1.name[i]);
+		System.out.println();
+		System.out.println("油箱容量(/L)："+c1.tank);
+		System.out.println("油耗(km/h)："+c1.oilConsumption);
+		System.out.println();
+		
+		c1.use_gas();
+		c1.run();
+		c1.add_gas();
+		c1.use_gas();
+		c1.run();
+	}
+}
+
+测试运行结果如下：
+请输入该汽车的名称：asfdjsihdwj
+请输入该汽车的邮箱容量：35
+
+该汽车的基本信息如下：
+汽车名：asfdjsihdwj
+油箱容量(/L)：35
+油耗(km/h)：30
+
+请输入想要消耗的油量(/L)：20
+现有油量为(/L)：15
+汽车现有油量为(/L)：15 ，汽车可正常运行
+请输入想要增加的油量(/L)：10
+现有油量为(/L)：25
+请输入想要消耗的油量(/L)：25
+现有油量为(/L)：0
+警告！现有油量为0，汽车已无法运行！
