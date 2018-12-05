@@ -1,0 +1,37 @@
+   1.程序代码（Adress.java）
+
+     public class Adress {
+
+     public static void main(String[] args) {
+
+    		// TODO Auto-generated method stub
+
+    		String a="Hello";
+
+    		String b="World";
+
+    		int code=System.identityHashCode(a);
+
+    		System.out.println("The adress of "+"a"+" is :"+code);
+
+    		code=System.identityHashCode(b);
+
+    		System.out.println("The adress of "+"b"+" is :"+code);
+
+    		b=a;
+
+    		code=System.identityHashCode(b);
+
+    		System.out.println("The adress of "+"b"+" is :"+code);		
+
+    	}
+
+    }
+
+    2.运行结果
+
+      The adress of a is :2018699554
+
+      The adress of b is :1311053135
+
+      The adress of b is :2018699554
