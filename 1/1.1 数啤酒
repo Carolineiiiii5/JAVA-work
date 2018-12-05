@@ -1,0 +1,131 @@
+  1.程序代码（Nursery.java）
+
+    public class Nursery 
+
+    {
+
+    	public static void main(String[] args) 
+
+    	{
+
+    		// TODO Auto-generated method stub
+
+    			int n=99;
+
+    			String b="bottles";
+
+    			for(;n>0;n--)
+
+    			{
+
+    				if(n>1)
+
+    				{
+
+    					System.out.println(n+" "+b+" of beer on the wall, "+n+" "+b+" of beer.");
+
+    					System.out.println("Take one down.");
+
+    					System.out.println("Pass it around.");
+
+    					System.out.println(n-1+" "+b+" of beer on the wall.");
+
+    					System.out.println(" ");
+
+    				}
+
+    				else
+
+    				{
+
+    					System.out.println(n+" "+b+" of beer on the wall, "+n+" "+b+" of beer.");
+
+    					System.out.println("Take one down.");
+
+    					System.out.println("Pass it around.");
+
+    					System.out.println("No more bottles of beer on the wall.");
+
+    					System.out.println(" ");
+
+    				}
+
+    			}
+
+    	}
+
+    2.运行结果
+
+      99 bottles of beer on the wall, 99 bottles of beer.
+
+      Take one down.
+
+      Pass it around.
+
+      98 bottles of beer on the wall.
+
+       
+
+      98 bottles of beer on the wall, 98 bottles of beer.
+
+      Take one down.
+
+      Pass it around.
+
+      97 bottles of beer on the wall.
+
+       
+
+      97 bottles of beer on the wall, 97 bottles of beer.
+
+      Take one down.
+
+      Pass it around.
+
+      96 bottles of beer on the wall.
+
+      
+
+      ... ...(大量重复，略)
+
+      
+
+      4 bottles of beer on the wall, 4 bottles of beer.
+
+      Take one down.
+
+      Pass it around.
+
+      3 bottles of beer on the wall.
+
+       
+
+      3 bottles of beer on the wall, 3 bottles of beer.
+
+      Take one down.
+
+      Pass it around.
+
+      2 bottles of beer on the wall.
+
+       
+
+      2 bottles of beer on the wall, 2 bottles of beer.
+
+      Take one down.
+
+      Pass it around.
+
+      1 bottles of beer on the wall.
+
+       
+
+      1 bottles of beer on the wall, 1 bottles of beer.
+
+      Take one down.
+
+      Pass it around.
+
+      No more bottles of beer on the wall.
+
+   
