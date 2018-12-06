@@ -1,0 +1,2 @@
+测试各类集合的性能：
+对于String类型的数据,用List，Set，HashSet，TreeSet进行存储查找操作，并用java中记录时间的函数记录每个操作所用时间
